@@ -17,11 +17,7 @@
 
   --color-icon: #737373;
   --color-label: #737373;
-  --color-label-darktheme: #b5b5b5;
   --color-black: #2c2c2c;
-  --color-background-darktheme: #1d1d1d;
-  --color-header-black: #252525;
-  --color-header-tag: #747373;
   --color-white: #ffffff;
   --color-border: #dedede;
 }
@@ -131,40 +127,10 @@
         border: 0;
       }
 
-      &.loading {
-        &::after {
-          content: "";
-          display: inline-block;
-          width: 8px;
-          height: 8px;
-          border-width: 1px;
-          border-style: solid;
-          border-color: var(--color-placeholder) transparent transparent var(--color-placeholder);
-          border-radius: 50%;
-          padding: 3px;
-          position: absolute;
-          top: 1rem;
-          right: 1rem;
-          animation-name: spin;
-          animation-duration: 0.3s;
-          animation-iteration-count: infinite;
-          animation-timing-function: linear;
-        }
-      }
-
       input {
         &::placeholder {
           color: var(--color-placeholder);
         }
-      }
-    }
-
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
       }
     }
 

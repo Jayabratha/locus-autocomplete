@@ -8,7 +8,7 @@ const keyCode = {
   DOWN: 40
 };
 
-const Autocomplete = ({ id, loading, placeholder, list, onSelect, onChange }) => {
+const Autocomplete = ({ id, placeholder, list, onSelect, onChange }) => {
   const [inFocus, setInFocus] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -92,7 +92,8 @@ const Autocomplete = ({ id, loading, placeholder, list, onSelect, onChange }) =>
         }
         case keyCode.RETURN: {
           event.preventDefault();
-          handleSelect(currentIndex);
+          listElementRef.current.focus();
+          handleSelect(currentIndex, true);
           break;
         }
       }
@@ -117,7 +118,7 @@ const Autocomplete = ({ id, loading, placeholder, list, onSelect, onChange }) =>
   return (
     <div className='jsd-autocomplete-wrapper'>
       <div id={id} className={`wrapper-box autocomplete-wrapper ${isExpanded ? 'expanded' : ''} ${inFocus ? 'focus' : ''}`}>
-        <div className={`input-wrapper ${loading ? ' loading' : ''}`}
+        <div className='input-wrapper'
           aria-haspopup='listbox'
           onBlur={toggleFocus}
           aria-expanded={isExpanded}>
