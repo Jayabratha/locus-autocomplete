@@ -1,0 +1,24 @@
+.suggestion {
+    text-align: left;
+    padding: 10px;
+    .id {
+        font-size: 1.1rem;
+        padding-bottom: 5px;
+    }
+    .address {
+        color: #737373;
+        font-size: 0.8rem;
+        margin-top: 5px;
+    }
+    .item {
+        color: #737373;
+        font-size: 0.8rem;
+        &:not(:last-child) {
+            margin-right: 4px;
+            &::after {
+                content: ',';
+                padding-left: 2px;
+            }
+        }
+    }
+}
