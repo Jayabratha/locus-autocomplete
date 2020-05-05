@@ -116,7 +116,7 @@ const Autocomplete = ({ id, placeholder, list, onSelect, onChange }) => {
   }
 
   return (
-    <div className='jsd-autocomplete-wrapper'>
+    <div className='js-autocomplete-wrapper'>
       <div id={id} className={`wrapper-box autocomplete-wrapper ${isExpanded ? 'expanded' : ''} ${inFocus ? 'focus' : ''}`}>
         <div className='input-wrapper'
           aria-haspopup='listbox'
