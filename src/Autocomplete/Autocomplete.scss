@@ -173,7 +173,7 @@
         position: relative;
         height: auto;
         padding: 0 2.1rem;
-        border-bottom: thin solid var(--color-border);
+        border-top: thin solid var(--color-border);
         box-sizing: border-box;
         cursor: pointer;
 
@@ -209,7 +209,6 @@
       ul {
         height: auto;
         max-height: 450px;
-        border-top: 1px solid var(--color-border);
       }
     }
   }
